@@ -1,0 +1,22 @@
+{
+  "name": "project-express",
+  "version": "1.0.0",
+  "description": "This project is for javascript practive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tung-jZ/project-expressjs.git"
+  },
+  "author": "tung-jZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tung-jZ/project-expressjs/issues"
+  },
+  "homepage": "https://github.com/tung-jZ/project-expressjs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
