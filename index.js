@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 var port = 3000;
 
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 app.get('/', function(req, res) {
 	res.send('Hello Express js');
 });
