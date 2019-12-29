@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
 var port = 3000;
 
 var users = [
@@ -9,6 +11,12 @@ var users = [
 
 app.set('views', './views');
 app.set('view engine', 'pug');
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
     res.render('index', {
@@ -33,7 +41,12 @@ app.get('/users/search', function(req, res) {
 });
 
 app.get('/users/create', function(req, res) {
-	res.render('users/create');
+    res.render('users/create');
+});
+
+app.post('/users/create', function(req, res) {
+    users.push(req.body);
+    res.redirect('/users');
 });
 
 app.listen(port, function() {
