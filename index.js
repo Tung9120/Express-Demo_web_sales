@@ -32,6 +32,10 @@ app.get('/users/search', function(req, res) {
     });
 });
 
+app.get('/users/create', function(req, res) {
+	res.render('users/create');
+});
+
 app.listen(port, function() {
     console.log('Server is running on port ' + port);
 });
