@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var low = require('lowdb');
-var shortId = require('shortid');
+var shortid = require('shortid');
 
 var FileSync = require('lowdb/adapters/FileSync');
 var adapter = new FileSync('db.json');
@@ -18,7 +18,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
@@ -50,14 +50,15 @@ app.get('/users/create', function(req, res) {
 });
 
 app.get('/users/:id', function(req, res) {
-	var id = req.params.id;
-	var user = db.get('users').find({id: id});
-	res.render('users/view', {
-		user: user
-	})
+    var id = req.params.id;
+    var user = db.get('users').find({ id: id }).value();
+    res.render('users/view', {
+        user: user
+    });
 });
 
 app.post('/users/create', function(req, res) {
+    req.body.id = shortid.generate();
     db.get('users').push(req.body).write();
     res.redirect('/users');
 });
