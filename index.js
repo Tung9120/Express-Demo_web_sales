@@ -1,13 +1,16 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var low = require('lowdb');
+var FileSync = require('lowdb/adapters/FileSync');
+var adapter = new FileSync('db.json');
+var db = low(adapter);
+
+// Set some defaults (required if your JSON file is empty)
+db.defaults({ users: [] })
+    .write()
 
 var port = 3000;
-
-var users = [
-    { name: 'Thinh' },
-    { name: 'Hung' }
-];
 
 app.set('views', './views');
 app.set('view engine', 'pug');
