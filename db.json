@@ -1,3 +1,16 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Tung"
+    },
+    {
+      "name": "junior dev"
+    },
+    {
+      "name": "fresher dev"
+    },
+    {
+      "name": "intern dev"
+    }
+  ]
 }

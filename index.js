@@ -16,7 +16,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 app.use(bodyParser.json());
@@ -29,13 +29,13 @@ app.get('/', function(req, res) {
 
 app.get('/users', function(req, res) {
     res.render('users/index', {
-        users: users
+        users: db.get('users').value()
     });
 });
 
 app.get('/users/search', function(req, res) {
     var q = req.query.q;
-    var matchedUsers = users.filter(function(user) {
+    var matchedUsers = db.get('users').value().filter(function(user) {
         return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
     res.render('users/index', {
@@ -48,7 +48,7 @@ app.get('/users/create', function(req, res) {
 });
 
 app.post('/users/create', function(req, res) {
-    users.push(req.body);
+    db.get('users').push(req.body).write();
     res.redirect('/users');
 });
 
