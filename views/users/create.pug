@@ -1,4 +1,6 @@
-h3 Create new user
-form(action="/users/create", method="post")
-	input(type="text", name="name")
-	button(type="submit") Create
+extends ../template/common
+block content
+	h3 Create new user
+	form(action="/users/create", method="post")
+		input(type="text", name="name")
+		button(type="submit") Create
