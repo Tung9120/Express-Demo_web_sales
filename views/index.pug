@@ -1,3 +1,5 @@
 
-h3 hello admin #{name}
-a(href="/users") User list
+extend ./template/common
+block content
+    h3 hello admin #{name}
+    a(href="/users") User list
