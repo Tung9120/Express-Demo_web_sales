@@ -22,12 +22,6 @@ app.get('/', function(req, res) {
     });
 });
 
-app.get('/test', function(req, res) {
-	res.render('index2',{
-		content: 'PUG'
-	});
-});
-
 app.use('/users', userRoute);
 
 app.listen(port, function() {
