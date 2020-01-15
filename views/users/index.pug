@@ -2,13 +2,18 @@ extends ../template/common.pug
 block content
 	h3 User list
 	p
-		a(href="/users/create") Create new user
+		a.btn.btn-primary(href="/users/create") Create new user
 	form(action="/users/search", method="get")
 		input(type="text", name="q")
 		button(type="submit") Search
-	ul
+	table.table.my-3
+		tr
+			th Name
+			th Phone
+			th Actions
 		each user in users
-			li
-				span= user.name
-				span &nbsp;
-				a(href="/users/" + user.id) Views
+			tr
+				td= user.name
+				td= user.phone
+				td
+					a.btn.btn-light(href="/users/" + user.id) View
