@@ -4,11 +4,16 @@ block content
 		.row
 			.col-12
 				h3 Create new user
+
+				if errors
+					each error in errors
+						.alert.alert-danger= error
+
 				form(action="/users/create", method="post")
 					.form-group
 						label(for="name") Name
-						input#name.form-control(type="text", name="name")
+						input#name.form-control(type="text", name="name", value= value ? value.name : "")
 					.form-group
 						label(for="phone") Phone
-						input#phone.form-control(type="number", name="phone")
+						input#phone.form-control(type="number", name="phone", value= value ? value.phone: "")
 					button.btn.btn-success(type="submit") Create
