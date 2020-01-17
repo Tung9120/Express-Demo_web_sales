@@ -2,7 +2,7 @@ extends ../template/common.pug
 block content
 	h3 User list
 	p
-		a.btn.btn-primary(href="/users/create") Create new user
+		a.btn.btn-success(href="/users/create") Create new user
 	form(action="/users/search", method="get")
 		input(type="text", name="q")
 		button(type="submit") Search
