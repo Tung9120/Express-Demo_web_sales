@@ -1,21 +1,21 @@
 {
   "users": [
     {
-      "name": "Tung",
-      "phone": "112",
-      "id": "08b4efrM"
-    },
-    {
-      "name": "sd",
-      "phone": "",
-      "id": "t4w5rT_A"
+      "name": "2",
+      "phone": "1",
+      "id": "1qF1cdcS"
     },
     {
       "name": "Tung",
       "phone": "0971471594",
-      "id": "vSMw5-U8",
-      "email": "tungpanit95@gmail.com",
-      "password": "123456"
+      "id": "WTp4Z5B-"
+    },
+    {
+      "name": "Tung",
+      "phone": "0971471594",
+      "email": "vutung959595@gmail.com",
+      "password": "laptrinhphp",
+      "id": "Qpt5dsvk"
     }
   ]
 }

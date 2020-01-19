@@ -16,4 +16,10 @@ block content
 					.form-group
 						label(for="phone") Phone
 						input#phone.form-control(type="number", name="phone", value= value ? value.phone: "")
+					.form-group
+						label(for="email") Email
+						input#email.form-control(type="text", name="email", value= value ? value.email: "")
+					.form-group
+						label(for="password") Password
+						input#phone.form-control(type="text", name="password", value= value ? value.password: "")
 					button.btn.btn-success(type="submit") Create
