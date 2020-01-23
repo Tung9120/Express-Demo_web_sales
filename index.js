@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(cookieParser());
+app.use(cookieParser('learn javascript fullstack'));
 
 app.use(express.static('public'));
 
