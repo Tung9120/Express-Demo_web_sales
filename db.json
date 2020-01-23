@@ -1,28 +1,11 @@
 {
   "users": [
     {
-      "name": "2",
-      "phone": "1",
-      "id": "1qF1cdcS"
-    },
-    {
-      "name": "Tung",
-      "phone": "0971471594",
-      "id": "WTp4Z5B-"
-    },
-    {
+      "id": "SBNfMVlc",
       "name": "Tung",
       "phone": "0971471594",
       "email": "vutung959595@gmail.com",
-      "password": "laptrinhphp",
-      "id": "Qpt5dsvk"
-    },
-    {
-      "name": "Hieu",
-      "phone": "0123",
-      "email": "hieu@gmail.com",
-      "password": "123",
-      "id": "FsvtuFc-"
+      "password": "202cb962ac59075b964b07152d234b70"
     }
   ]
 }
