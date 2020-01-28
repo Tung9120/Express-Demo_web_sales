@@ -15,6 +15,36 @@
       "password": "c4ca4238a0b923820dcc509a6f75849b"
     }
   ],
-  "products": [],
-  "product": []
+  "products": [
+    {
+      "id": "AihIMkRz",
+      "name": "sand wick",
+      "description": "delicious",
+      "price": "2000"
+    },
+    {
+      "id": "vXmE-NhD",
+      "name": "Milk",
+      "description": "sweet",
+      "price": "7000"
+    },
+    {
+      "id": "6Ad48qQj",
+      "name": "egg noodle",
+      "description": "cheap but delicious",
+      "price": "15000"
+    },
+    {
+      "id": "CZ_JNqk5",
+      "name": "Cocacola",
+      "description": "soft drink",
+      "price": "7000"
+    },
+    {
+      "id": "edSfrvYT",
+      "name": "Chocolate bar",
+      "description": "Cheap but delicious",
+      "price": "20000"
+    }
+  ]
 }

@@ -34,7 +34,7 @@ app.get('/', authMiddleware.requireAuth, function(req, res) {
 });
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
-app.use('/products', authMiddleware.requireAuth, productRoute);
+app.use('/products', productRoute);
 app.use('/auth', authRoute);
 
 app.listen(port, function() {
