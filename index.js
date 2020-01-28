@@ -28,7 +28,7 @@ app.use(express.static('public'));
 
 app.get('/', authMiddleware.requireAuth, function(req, res) {
     res.render('index', {
-        name: 'Tung'
+        name: req.locals.user
     });
 });
 
