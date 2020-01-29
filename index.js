@@ -27,7 +27,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));
 
 app.use(express.static('public'));
 
-app.get('/', authMiddleware.requireAuth, function(req, res) {
+app.get('/', function(req, res) {
     res.render('index');
 });
 

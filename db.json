@@ -5,21 +5,24 @@
       "name": "Tung",
       "phone": "0971471594",
       "email": "vutung959595@gmail.com",
-      "password": "202cb962ac59075b964b07152d234b70"
+      "password": "202cb962ac59075b964b07152d234b70",
+      "regency": "admin"
     },
     {
       "id": "dy6hME9R",
       "name": "Thinh",
       "phone": "133",
       "email": "a@a",
-      "password": "c4ca4238a0b923820dcc509a6f75849b"
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "regency": "admin"
     },
     {
       "id": "-XFseC8C",
       "name": "a",
       "phone": "0971471594",
       "email": "2",
-      "password": "c4ca4238a0b923820dcc509a6f75849b"
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "regency": "user"
     }
   ],
   "products": [
@@ -76,6 +79,12 @@
       "name": "Pasta",
       "description": "Special noodles",
       "price": "25000"
+    },
+    {
+      "id": "41Gh7LTf",
+      "name": "Fried rice",
+      "description": "delicious",
+      "price": "20000"
     }
   ]
 }
