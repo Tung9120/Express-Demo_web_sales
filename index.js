@@ -28,9 +28,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.static('public'));
 
 app.get('/', authMiddleware.requireAuth, function(req, res) {
-    res.render('index', {
-        name: req.locals.user
-    });
+    res.render('index');
 });
 
 app.use('/users', authMiddleware.requireAuth, userRoute);

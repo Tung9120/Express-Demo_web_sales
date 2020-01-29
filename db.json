@@ -52,6 +52,12 @@
       "name": "Chocolate bar",
       "description": "Cheap but delicious",
       "price": "20000"
+    },
+    {
+      "id": "IWoeifSn",
+      "name": "Wine",
+      "description": "Drink a lot not good",
+      "price": "25000"
     }
   ]
 }
