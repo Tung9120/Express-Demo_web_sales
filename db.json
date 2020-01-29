@@ -70,6 +70,12 @@
       "name": "Cake",
       "description": "Sweet",
       "price": "15000"
+    },
+    {
+      "id": "0x04v901",
+      "name": "Pasta",
+      "description": "Special noodles",
+      "price": "25000"
     }
   ]
 }

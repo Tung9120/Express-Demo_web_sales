@@ -14,7 +14,7 @@ module.exports.postCreate = function(req, res, next){
     }
 
     if(errors.length){
-        res.render('', {
+        res.render('products/create', {
             errors: errors,
             value: req.body
         });
