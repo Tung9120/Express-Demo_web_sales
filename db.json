@@ -25,9 +25,9 @@
   "products": [
     {
       "id": "AihIMkRz",
-      "name": "sand wick",
+      "name": "sandwich",
       "description": "delicious",
-      "price": "2000"
+      "price": "20000"
     },
     {
       "id": "vXmE-NhD",
@@ -58,6 +58,18 @@
       "name": "Wine",
       "description": "Drink a lot not good",
       "price": "25000"
+    },
+    {
+      "id": "Z8DNc3g6",
+      "name": "Lemon tea",
+      "description": "Hot drink",
+      "price": "5000"
+    },
+    {
+      "id": "ZbHYgYW4",
+      "name": "Cake",
+      "description": "Sweet",
+      "price": "15000"
     }
   ]
 }
