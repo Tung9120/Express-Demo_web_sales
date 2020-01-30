@@ -17,12 +17,18 @@
       "regency": "admin"
     },
     {
-      "id": "-XFseC8C",
-      "name": "a",
+      "id": "sYXveOC_",
+      "name": "Tung",
       "phone": "0971471594",
-      "email": "2",
-      "password": "c4ca4238a0b923820dcc509a6f75849b",
-      "regency": "user"
+      "email": "tungpanit95@gmail.com",
+      "password": "c4ca4238a0b923820dcc509a6f75849b"
+    },
+    {
+      "id": "hA12U2-b",
+      "name": "user",
+      "phone": "123",
+      "email": "user@g",
+      "password": "c4ca4238a0b923820dcc509a6f75849b"
     }
   ],
   "products": [
@@ -85,6 +91,12 @@
       "name": "Fried rice",
       "description": "delicious",
       "price": "20000"
+    },
+    {
+      "id": "ZESLfPXs",
+      "name": "Orange juice",
+      "description": "from fresh fruit",
+      "price": "15000"
     }
   ]
 }

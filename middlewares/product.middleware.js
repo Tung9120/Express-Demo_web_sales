@@ -7,13 +7,22 @@ module.exports.requireAdmin = function(req, res, next){
         return;
     }
 
-    var user = db.get('users').find({id: req.signedCookies.id}).value();
+    var user = db.get('users').find({id: req.signedCookies.userId}).value();
 
     if(!user){
         res.redirect('/auth/login');
         res.locals.errors = "Wrong username";
         return;
     }
-    
+
+    if(user.regency !== 'admin'){
+        res.locals.class = 'd-none';
+        res.locals.user = user;
+        res.redirect('/products');
+        return;
+    }
+
+    res.locals.user = user;
+
     next();
 };
