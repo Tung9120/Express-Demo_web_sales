@@ -2,16 +2,14 @@ var db = require('../db');
 
 module.exports.requireAdmin = function(req, res, next){
     if(!req.signedCookies.userId){
-        res.redirect('/auth/login');
-        res.locals.errors = "Required login";
+        res.redirect('/products');
         return;
     }
 
     var user = db.get('users').find({id: req.signedCookies.userId}).value();
 
     if(!user){
-        res.redirect('/auth/login');
-        res.locals.errors = "Wrong username";
+        res.redirect('/products');
         return;
     }
 
