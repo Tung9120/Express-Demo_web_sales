@@ -1,0 +1,11 @@
+extends ../template/common
+block content
+    .container 
+        .row.justify-content-center
+            .col-4.my-5
+                img.card-img-top.d-block(src="https://via.placeholder.com/297x180")
+                h3= product.name
+                p= product.description
+                p
+                    span= product.price
+                    span &nbsp; VND

@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": "6TNWw0_t",
+      "name": "Tung",
+      "phone": "0971471594",
+      "email": "vutung959595@gmail.com",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "regency": "admin"
+    },
+    {
+      "id": "dy6hME9R",
+      "name": "Thinh",
+      "phone": "133",
+      "email": "a@a",
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "regency": "admin"
+    },
+    {
+      "id": "sYXveOC_",
+      "name": "Tung",
+      "phone": "0971471594",
+      "email": "tungpanit95@gmail.com",
+      "password": "c4ca4238a0b923820dcc509a6f75849b"
+    },
+    {
+      "id": "hA12U2-b",
+      "name": "user",
+      "phone": "123",
+      "email": "user@g",
+      "password": "c4ca4238a0b923820dcc509a6f75849b"
+    }
+  ],
+  "products": [
+    {
+      "id": "AihIMkRz",
+      "name": "sandwich",
+      "description": "delicious",
+      "price": "20000"
+    },
+    {
+      "id": "vXmE-NhD",
+      "name": "Milk",
+      "description": "sweet",
+      "price": "7000"
+    },
+    {
+      "id": "6Ad48qQj",
+      "name": "egg noodle",
+      "description": "cheap but delicious",
+      "price": "15000"
+    },
+    {
+      "id": "CZ_JNqk5",
+      "name": "Cocacola",
+      "description": "soft drink",
+      "price": "7000"
+    },
+    {
+      "id": "edSfrvYT",
+      "name": "Chocolate bar",
+      "description": "Cheap but delicious",
+      "price": "20000"
+    },
+    {
+      "id": "IWoeifSn",
+      "name": "Wine",
+      "description": "Drink a lot not good",
+      "price": "25000"
+    },
+    {
+      "id": "Z8DNc3g6",
+      "name": "Lemon tea",
+      "description": "Hot drink",
+      "price": "5000"
+    },
+    {
+      "id": "ZbHYgYW4",
+      "name": "Cake",
+      "description": "Sweet",
+      "price": "15000"
+    },
+    {
+      "id": "0x04v901",
+      "name": "Pasta",
+      "description": "Special noodles",
+      "price": "25000"
+    },
+    {
+      "id": "41Gh7LTf",
+      "name": "Fried rice",
+      "description": "delicious",
+      "price": "20000"
+    },
+    {
+      "id": "ZESLfPXs",
+      "name": "Orange juice",
+      "description": "from fresh fruit",
+      "price": "15000"
+    },
+    {
+      "id": "02i10RuO",
+      "name": "Chew gum",
+      "description": "supper cheap",
+      "price": "1000"
+    }
+  ]
+}

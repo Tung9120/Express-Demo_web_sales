@@ -9,7 +9,7 @@ html
 	body
 		.navigation-bar
 			nav.navbar.navbar-expand-lg.navbar-dark.bg-success
-				a.navbar-brand(href="#") Demo Project
+				a.navbar-brand(href="/") Demo Project
 				button.navbar-toggler(type="button", data-toggle="collapse", data-target="#top-navbar")
 					span.navbar-toggler-icon
 				.collapse.navbar-collapse#top-navbar
@@ -19,6 +19,8 @@ html
 								span.sr-only (current)
 						li.nav-item
 							a.nav-link(href="/users") Users
+						li.nav-item
+							a.nav-link(href="/products") Products
 		if user
 			h2.bg-danger.text-light Hello, #{user.name}
 		block content

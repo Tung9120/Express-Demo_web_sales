@@ -5,24 +5,21 @@ module.exports.postCreate = function(req, res, next){
         errors.push('Name required');
     }
 
-    if(!req.body.phone){
-        errors.push('Phone required');
+    if(!req.body.description){
+        errors.push('Description required');
     }
 
-    if(!req.body.email){
-        errors.push('Email required');
-    }
-
-    if(!req.body.password){
-        errors.push('Password required');
+    if(!req.body.price){
+        errors.push('Price required');
     }
 
     if(errors.length){
-        res.render('users/create', {
+        res.render('products/create', {
             errors: errors,
             value: req.body
         });
         return;
     }
+
     next();
-}
+};

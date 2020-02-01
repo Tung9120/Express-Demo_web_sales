@@ -1,4 +1,6 @@
 extends ./template/common
 block content
-    h3 hello admin #{name}
-    a(href="/users") User list 
+    if user
+        h3 hello admin #{user.name}
+    h3.m-4 
+        a(href="/products") Product list 

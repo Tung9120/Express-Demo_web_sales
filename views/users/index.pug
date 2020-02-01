@@ -5,7 +5,8 @@ block content
 			.col-12
 				h3.mt-3 User list
 				p.my-3
-					a.btn.btn-success(href="/users/create") Create new user
+					if user.regency === 'admin'
+						a.btn.btn-success(href="/users/create") Create new user
 				form(action="/users/search", method="get")
 					input(type="text", name="q")
 					button(type="submit") Search
