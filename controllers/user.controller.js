@@ -33,6 +33,7 @@ module.exports.get = function(req, res) {
 
 module.exports.postCreate = function(req, res) {
     req.body.id = shortid.generate();
+    req.body.avatar = req.file.path.split("\\").slice(1).join('/');
 
     let user = {};
     user.id = req.body.id;
@@ -40,6 +41,7 @@ module.exports.postCreate = function(req, res) {
     user.phone = req.body.phone;
     user.email = req.body.email;
     user.password = md5(req.body.password);
+    user.avatar = req.body.avatar;
 
     db.get('users').push(user).write();
     res.redirect('/users');
