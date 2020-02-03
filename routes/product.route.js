@@ -1,4 +1,7 @@
 var express = require('express');
+var multer = require('multer');
+
+var upload = multer({dest: './public/uploads/'});
 
 var controller = require('../controllers/product.controller');
 var validate = require('../validate/product.validate');
@@ -14,6 +17,6 @@ router.get('/create',authMiddleware.requireAdmin, controller.create);
 
 router.get('/:id', controller.get);
 
-router.post('/create',authMiddleware.requireAdmin, validate.postCreate, controller.postCreate);
+router.post('/create', upload.single('productImage'),authMiddleware.requireAdmin, validate.postCreate, controller.postCreate);
 
 module.exports = router;

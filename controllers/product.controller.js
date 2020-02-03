@@ -32,12 +32,14 @@ module.exports.create = function(req, res){
 
 module.exports.postCreate = function(req, res){
     req.body.id = shortid.generate();
+    req.body.productImage = req.file.path.split('\\').slice(1).join('/');
 
     let product = {};
     product.id = req.body.id;
     product.name = req.body.name;
     product.description = req.body.description;
     product.price = req.body.price;
+    product.productImage = req.body.productImage;
 
     db.get('products').push(product).write();
     res.redirect('/products');

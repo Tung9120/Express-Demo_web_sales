@@ -9,7 +9,7 @@ block content
                     each error in errors
                         .alert.alert-danger= error
                 
-                form(action="/products/create", method="post")
+                form(action="/products/create", method="post", enctype="multipart/form-data")
                     .form-group
                         label(for="name") Name
                         input#name.form-control(type="text", name="name", value= value ? value.name : "", autofocus)
@@ -19,5 +19,7 @@ block content
                     .form-group
                         label(for="price") Price
                         input#price.form-control(type="text", name="price", value= value ? value.name : "")
-
+                    .form-group
+                        label(for="product-img") Image
+                        input#product-img.form-control-file(type="file", name="productImage")
                     button.btn.btn-success(type="submit") Create
