@@ -1,11 +1,9 @@
 var express = require('express');
-var multer = require('multer');
-
-var upload = multer({dest: './public/uploads/'});
 
 var controller = require('../controllers/product.controller');
 var validate = require('../validate/product.validate');
 var authMiddleware = require('../middlewares/product.middleware');
+var upload = require('../middlewares/upload.middlleware');
 
 var router = express.Router();
 
