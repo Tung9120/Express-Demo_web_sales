@@ -31,6 +31,30 @@
       "email": "tung2@a",
       "password": "c4ca4238a0b923820dcc509a6f75849b",
       "avatar": "uploads/4025a8f64ae673d3cc85235643989b26"
+    },
+    {
+      "id": "1UHqARU7",
+      "name": "Tung",
+      "phone": "0971471594",
+      "email": "vutung959595@gmail.com",
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "avatar": "uploads/avatar_1583695378318.jpg"
+    },
+    {
+      "id": "eFSBrfak",
+      "name": "intern dev",
+      "phone": "1",
+      "email": "1",
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "avatar": "uploads/avatar_1583695504696.png"
+    },
+    {
+      "id": "a9-yHPiA",
+      "name": "fresher dev",
+      "phone": "1",
+      "email": "1",
+      "password": "c4ca4238a0b923820dcc509a6f75849b",
+      "avatar": "uploads/avatar_1583695529455.png"
     }
   ],
   "products": [
