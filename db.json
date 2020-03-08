@@ -123,12 +123,6 @@
       "name": "Orange juice",
       "description": "from fresh fruit",
       "price": "15000"
-    },
-    {
-      "id": "02i10RuO",
-      "name": "Chew gum",
-      "description": "supper cheap",
-      "price": "1000"
     }
   ]
 }

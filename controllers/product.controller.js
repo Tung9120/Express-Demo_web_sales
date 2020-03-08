@@ -39,7 +39,7 @@ module.exports.postCreate = function(req, res){
     product.name = req.body.name;
     product.description = req.body.description;
     product.price = req.body.price;
-    product.productImage = req.body.productImage;
+    product.productImage = req.body.product_image;
 
     db.get('products').push(product).write();
     res.redirect('/products');
