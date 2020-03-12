@@ -11,7 +11,7 @@ block content
                     button(type="submit") Search
         .row
             each product in products
-                .col-lg-3.col-12.my-3
+                .col-lg-3.col-12.my-2
                     .card
                         img.card-img-top(src= product.productImage, width="297px", height="180px")
                         .card-body
@@ -21,5 +21,43 @@ block content
                                 span= product.price
                                 span &nbsp;$
                             a.btn.btn-success.mr-4(href="#") Add to card
+                
                             a.btn.btn-secondary(href="/products/" + product.id) View
+            
+            .col-12.py-3
+                if pages > 0
+                    nav
+                        ul.pagination.justify-content-center
+                            if(current == 1)
+                                li.disabled.page-item 
+                                    a.page-link First
+                            else
+                                li.page-item
+                                    a.page-link(href="/products?page=1") First
 
+                            - var i = ( Number(current) > 5 ) ? Number(current) - 4 : 1                
+                            if i !== 1
+                                li.page-item.disabled
+                                    a.page-link ...
+                            while i <= (Number(current) + 4) && i <= pages
+                                if i == current
+                                    li.page-item.active
+                                        a.page-link(href="/products?page=" + i)= i
+                                else
+                                    li.page-item
+                                        a.page-link(href="/products?page=" + i)= i
+                                if i == (Number(current) + 4) && i < pages
+                                    li.page-item.disabled
+                                        a.page-link ...
+
+                                - i++
+
+                            if current == pages 
+                                li.page-item.disabled
+                                    a.page-link Last
+                            else
+                                li.page-item
+                                    a.page-link(href="/products?page=" + pages) Last
+
+
+                                            
