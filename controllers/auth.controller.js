@@ -36,6 +36,8 @@ module.exports.postLogin = function(req, res){
     
     res.cookie('userId', user.id, {
         signed: true
+    }, {
+        maxAge: 60000
     });
     
     res.redirect('/');
