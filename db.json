@@ -727,5 +727,10 @@
       "description": "nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo",
       "price": 6
     }
+  ],
+  "sessions": [
+    {
+      "id": "9ulcRGffn"
+    }
   ]
 }
