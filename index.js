@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
 var productRoute = require('./routes/product.route');
+var cartRoute = require('./routes/cart.route');
 
 var authMiddleware = require('./middlewares/auth.middleware');
 var sessionMiddleware = require('./middlewares/session.middleware');
@@ -37,6 +38,7 @@ app.get('/', function(req, res) {
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/products', productRoute);
 app.use('/auth', authRoute);
+app.use('/cart', cartRoute);
 
 app.listen(port, function() {
     console.log('Server is running on port ' + port);
