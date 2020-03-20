@@ -7,7 +7,7 @@ module.exports = function(req, res, next){
     if(!req.signedCookies.sessionId){
         res.cookie('sessionId', sessionId, {
             signed: true
-        });
+        }, {maxAge: 60000});
     }
 
     db.get('sessions').push({
