@@ -9,6 +9,7 @@ var authRoute = require('./routes/auth.route');
 var productRoute = require('./routes/product.route');
 
 var authMiddleware = require('./middlewares/auth.middleware');
+var sessionMiddleware = require('./middlewares/session.middleware');
 
 var port = 3000;
 
@@ -22,8 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
-
+// cookie
 app.use(cookieParser(process.env.SESSION_SECRET));
+// session
+app.use(sessionMiddleware);
 
 app.use(express.static('public'));
 
