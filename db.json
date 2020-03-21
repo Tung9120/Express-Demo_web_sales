@@ -728,5 +728,9 @@
       "price": 6
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "id": "eEyd6vflP"
+    }
+  ]
 }
