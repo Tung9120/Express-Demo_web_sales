@@ -44,8 +44,15 @@ module.exports.showCart = function(req, res, next){
         productsInCart.push(takenProduct);
     }
 
+    var productQuantity = productsInCart.reduce(function(total, product){
+        return total + product.quantity;
+    }, 0);
+
+    console.log(productQuantity);
+
     res.render('cart/index', {
-        productsInCart: productsInCart
+        productsInCart: productsInCart,
+        productQuantity: productQuantity
     });
 };
 
@@ -68,6 +75,8 @@ module.exports.addToCart = function(req, res, next){
         .find({id: sessionId})
         .set('cart.' + productId, count + 1)
         .write();
+
+    
 
     res.redirect('/products');
 };
