@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
 	head
 		meta(charset="utf-8")
@@ -21,6 +21,8 @@ html
 							a.nav-link(href="/users") Users
 						li.nav-item
 							a.nav-link(href="/products") Products
+						li.nav-item
+							a.nav-link(href="/cart") Cart
 		if user
 			h2.bg-danger.text-light Hello, #{user.name}
 		block content

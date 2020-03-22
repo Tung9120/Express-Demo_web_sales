@@ -1,0 +1,26 @@
+extends ../template/common
+
+block content
+    h2.text-center.my-5 Cart
+    table.table.table-success.mx-auto.my-5.w-75
+        if !productsInCart
+            p.text-center.lead Nothing into cart !
+
+        else
+            tr.text-center
+                th.px-5.py-3 Image
+                th.px-5.py-3 Product
+                th.px-5.py-3 Price
+                th.px-5.py-3 Quantity
+                th.px-5.py-3 Total
+                th.px-5.py-3 Remove
+
+            each product in productsInCart
+                tr.text-center
+                    td.px-5= product.productImage
+                    td.px-5= product.name
+                    td.px-5= product.price                
+                    td.px-5= product.quantity
+                    td.px-5 ?
+                    td.px-5
+                        input(type="button" value="Remove")

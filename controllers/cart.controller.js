@@ -1,5 +1,56 @@
 var db = require('../db');
 
+module.exports.showCart = function(req, res, next){
+    var sessionId = req.signedCookies.sessionId;
+
+    if(!sessionId){
+        res.redirect('/products');
+        return;
+    }
+
+    var session = db
+        .get('sessions')
+        .find({id: sessionId})
+        .value();
+
+    if(session.cart){
+        var productListInCart = session.cart;
+    }else{
+        res.render('cart/index');
+        return
+    }
+
+    var products = db
+        .get('products')
+        .value();
+
+    var productsInCart = [];
+
+    for(var key in productListInCart){
+
+        var takenProduct = {};
+
+        var matchedProducts = products.filter(function(product) {
+            return product.id === key;
+        });
+
+        takenProduct.id = matchedProducts[0].id;
+        takenProduct.name = matchedProducts[0].name;
+        takenProduct.productImage = matchedProducts[0].productImage;
+        takenProduct.description = matchedProducts[0].description
+        takenProduct.price = matchedProducts[0].price;
+        takenProduct.quantity = productListInCart[key];
+
+        productsInCart.push(takenProduct);
+    }
+
+    console.log(productsInCart);
+
+    res.render('cart/index', {
+        productsInCart: productsInCart
+    });
+};
+
 module.exports.addToCart = function(req, res, next){
     var productId = req.params.productId;
     var sessionId = req.signedCookies.sessionId;
