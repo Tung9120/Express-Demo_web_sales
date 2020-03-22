@@ -48,11 +48,10 @@ module.exports.showCart = function(req, res, next){
         return total + product.quantity;
     }, 0);
 
-    console.log(productQuantity);
+    res.cookie('productQuantity', productQuantity);
 
     res.render('cart/index', {
-        productsInCart: productsInCart,
-        productQuantity: productQuantity
+        productsInCart: productsInCart
     });
 };
 
@@ -75,8 +74,6 @@ module.exports.addToCart = function(req, res, next){
         .find({id: sessionId})
         .set('cart.' + productId, count + 1)
         .write();
-
-    
-
+        
     res.redirect('/products');
 };

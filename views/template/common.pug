@@ -6,7 +6,7 @@ html
 		title Document
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
 		block css
-	body
+	body(style="background-color: #e8e8e8")
 		.navigation-bar
 			nav.navbar.navbar-expand-lg.navbar-dark.bg-success
 				a.navbar-brand(href="/") Demo Project
@@ -22,7 +22,10 @@ html
 						li.nav-item
 							a.nav-link(href="/products") Products
 						li.nav-item
-							a.nav-link(href="/cart") Cart
+							a.nav-link(href="/cart") Cart &nbsp;
+								if productQuantity && productQuantity > 0
+									span.badge.badge-pill.badge-danger.text-white= productQuantity
+
 		if user
 			h2.bg-danger.text-light Hello, #{user.name}
 		block content

@@ -14,5 +14,9 @@ module.exports = function(req, res, next){
         }).write();
     }
 
+    if(req.cookies.productQuantity){
+        res.locals.productQuantity = req.cookies.productQuantity;
+    }
+
     next();
 };
