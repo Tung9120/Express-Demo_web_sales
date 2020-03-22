@@ -13,11 +13,11 @@ module.exports.showCart = function(req, res, next){
         .find({id: sessionId})
         .value();
 
-    if(session.cart){
-        var productListInCart = session.cart;
-    }else{
+    if(!session){
         res.render('cart/index');
         return
+    }else{
+        var productListInCart = session.cart;
     }
 
     var products = db
