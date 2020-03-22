@@ -44,8 +44,6 @@ module.exports.showCart = function(req, res, next){
         productsInCart.push(takenProduct);
     }
 
-    console.log(productsInCart);
-
     res.render('cart/index', {
         productsInCart: productsInCart
     });

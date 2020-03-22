@@ -728,19 +728,5 @@
       "price": 6
     }
   ],
-  "sessions": [
-    {
-      "id": "gXdrLHohL"
-    },
-    {
-      "id": "x_GDDOlA_"
-    },
-    {
-      "id": "da1ZfiUaz",
-      "cart": {
-        "740675bc-909c-49b2-a7f9-c848d85c473b": 1,
-        "6086a9b7-35b6-442c-b883-c86211259b27": 1
-      }
-    }
-  ]
+  "sessions": []
 }
