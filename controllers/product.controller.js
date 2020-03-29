@@ -1,6 +1,7 @@
 var shortid = require('shortid');
 
 var db = require('../db');
+var Product = require('../models/product.model');
 
 module.exports.index = function(req, res){
     // res.render('products/index', {
