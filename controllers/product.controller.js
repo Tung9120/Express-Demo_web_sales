@@ -3,25 +3,22 @@ var shortid = require('shortid');
 var db = require('../db');
 var Product = require('../models/product.model');
 
-module.exports.index = function(req, res){
-    // res.render('products/index', {
-    //     products: db.get('products').value()
-    // });
-
-    var perPage = 8;
+module.exports.index = async function(req, res){
+    var perPage = 4;
     var page = parseInt(req.query.page) || 1;
-    var pageTotal = Math.ceil(db.get('products').value().length / perPage);
 
-    var start = (page - 1) * perPage;
-    var end = page * perPage;
-    var drop = (page - 1) * perPage;
+    var products = await Product
+                    .find()
+                    .skip((perPage * page) - perPage)
+                    .limit(perPage);
 
-    res.render('products/index', {
-       // products: db.get('products').value().slice(start, end)
-       products: db.get('products').drop(drop).take(perPage).value(),
+    var pageTotal = Math.ceil(products / perPage);
+    
+   res.render('products/index', {
+       products: products,
        current: page,
-       pages: pageTotal
-    });
+       pageTotal: pageTotal
+   });
 };
 
 module.exports.search = function(req, res){
