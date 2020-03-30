@@ -33,7 +33,8 @@ module.exports.search = async function(req, res){
     res.render('products/index', {
         products: products, 
         current: page,
-        pageTotal: pageTotal
+        pageTotal: pageTotal,
+        value: q
     });
 };
 
