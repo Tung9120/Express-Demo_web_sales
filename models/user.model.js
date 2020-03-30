@@ -5,7 +5,8 @@ var userSchema = new mongoose.Schema({
     phone: String,
     emai: String,
     password: String,
-    avatar: String
+    avatar: String,
+    regency: String
 });
 
 var User = mongoose.model('User', userSchema, 'users');
