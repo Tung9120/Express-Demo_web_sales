@@ -2,4 +2,3 @@ node_modules/
 .vs/
 .env
 public/
-db.json

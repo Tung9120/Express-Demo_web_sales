@@ -1,6 +1,3 @@
-var shortid = require('shortid');
-
-var db = require('../db');
 var Product = require('../models/product.model');
 
 module.exports.index = async function(req, res){
@@ -54,18 +51,19 @@ module.exports.create = function(req, res){
     res.render('products/create');
 };
 
-module.exports.postCreate = function(req, res){
-    req.body.id = shortid.generate();
-    req.body.productImage = req.file.path.split('\\').slice(1).join('/');
+module.exports.postCreate = async function(req, res){
+    var page = req.query.page || 1;
+    var productImage = (req.body.productImage) ? ( req.file.path.split('\\').slice(1).join('/') ) : "https://via.placeholder.com/150";
 
-    let product = {};
+    var product = {};
     product.id = req.body.id;
     product.name = req.body.name;
     product.description = req.body.description;
     product.price = req.body.price;
-    product.productImage = req.body.product_image;
+    product.productImage = productImage;
 
-    db.get('products').push(product).write();
-    res.redirect('/products');
+    await Product.create(product);
+    
+    res.redirect('/products?page=' + page);
 };
 
