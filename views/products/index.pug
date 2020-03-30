@@ -7,7 +7,7 @@ block content
                 p.my-3
                     a.btn.btn-success(href="/products/create") Create new product
                 form(action="/products/search", method="get")
-                    input(type="text", name="q", value= value ? value: "")
+                    input(type="text", name="q", value= value ? value : "")
                     button(type="submit") Search
         .row
             each product in products
