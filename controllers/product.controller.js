@@ -42,7 +42,8 @@ module.exports.search = async function(req, res){
 
 module.exports.get = async function(req, res){
     var id = req.params.id;
-    var product = db.get('products').find({id: id}).value();
+    
+    var product = await Product.findById({_id: id});
     
     res.render('products/view', {
         product: product
