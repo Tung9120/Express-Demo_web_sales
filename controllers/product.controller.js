@@ -12,7 +12,7 @@ module.exports.index = async function(req, res){
                     .skip((perPage * page) - perPage)
                     .limit(perPage);
 
-    var pageTotal = Math.ceil(products / perPage);
+    var pageTotal = Math.ceil( await Product.find().count() / perPage);
     
    res.render('products/index', {
        products: products,
@@ -21,19 +21,29 @@ module.exports.index = async function(req, res){
    });
 };
 
-module.exports.search = function(req, res){
+module.exports.search = async function(req, res){
     var q = req.query.q;
-    var matchedProducts = db.get('products').value().filter(function(product){
-        return product.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
-    });
+    var perPage = 4;
+    var page = parseInt(req.query.page) || 1;
+
+    var products = await Product
+                        .find({name: {$regex: q,$options: 'ig'}})
+                        .skip((perPage * page) - perPage )
+                        .limit(perPage);
+
+    var pageTotal = Math.ceil( await Product.find().count() / perPage);
+
     res.render('products/index', {
-        products: matchedProducts
+        products: products, 
+        current: page,
+        pageTotal: pageTotal
     });
 };
 
-module.exports.get = function(req, res){
+module.exports.get = async function(req, res){
     var id = req.params.id;
     var product = db.get('products').find({id: id}).value();
+    
     res.render('products/view', {
         product: product
     });
